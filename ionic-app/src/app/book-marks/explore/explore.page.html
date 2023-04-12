@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+<ion-menu-button>
+</ion-menu-button>
+    </ion-buttons>
+    <ion-title >Book marks</ion-title>
+    <!-- <ion-input label="Search" label-placement="floating" fill="solid" slot="end"></ion-input>
+
+    <ion-icon name="search" slot="end"></ion-icon> -->
+  </ion-toolbar>
+
+   
+
+  
+</ion-header>
+
+<ion-content>
+  <!-- <b></b>
+
+  <ion-buttons>
+    <ion-button slot="start" color="success" fill="solid">
+      Pretrazi
+          </ion-button> 
+  </ion-buttons> -->
+
+  <ion-list>
+    <app-book-elemnt *ngFor="let book of books" [book]="book" [routerLink]="book.id"></app-book-elemnt>
+  </ion-list>
+<!-- <ion-buttons class="">
+  <ion-button routerLink="/profil" color="success" fill="solid">
+  My profil
+  </ion-button> -->
+  <!-- <ion-button (click)="openMenu()" color="success" fill="solid" >
+  Menu
+    </ion-button>
+</ion-buttons>  -->
+</ion-content>
