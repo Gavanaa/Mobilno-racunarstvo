@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/book-marks/tabs/explore">
       </ion-back-button>
@@ -10,13 +10,20 @@
 
 
 <ion-content>
-<ion-card class="ion-padding" color="medium">
-  <ion-card-header>
+<ion-card class="ion-padding" color="tertiary">
+  <ion-card-header color="success">
     <ion-card-title>{{book.title}}</ion-card-title>
+    <p>
+      Author:
+      {{book.author}}
+    </p>
   </ion-card-header>
   <ion-card-content>
-    {{book.author}}
-
+    
+<p>Average mark is :</p>
+{{book.averagemark}}
+<p>My mark for this book is:</p>
+{{book.mymark}}
   </ion-card-content>
 </ion-card>
 </ion-content>

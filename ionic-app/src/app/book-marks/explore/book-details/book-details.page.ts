@@ -9,13 +9,13 @@ import { BookMarksService } from '../../book-marks.service';
   styleUrls: ['./book-details.page.scss'],
 })
 export class BookDetailsPage implements OnInit {
-book:Book={id:'b1',title:'Na Drini cuprija',author:'Andric',mymark :10,averagemark:10};
-//book:undefined;
+book:Book;
+
   constructor(private route:ActivatedRoute,private bookService:BookMarksService) { }
   ngOnInit() {
-    // this.route.paramMap.subscribe(paramMap=>{
-    //     this.book=this.bookService.getBook(String(paramMap.get('id')));
-    // })
+     this.route.paramMap.subscribe(paramMap=>{
+        this.book=this.bookService.getBook(String(paramMap.get('id')));
+     })
   }
 
 }

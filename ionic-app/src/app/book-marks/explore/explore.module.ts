@@ -8,6 +8,7 @@ import { ExplorePageRoutingModule } from './explore-routing.module';
 
 import { ExplorePage } from './explore.page';
 import { BookElemntComponent } from '../book-elemnt/book-elemnt.component';
+import { BookModalComponent } from '../book-modal/book-modal.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { BookElemntComponent } from '../book-elemnt/book-elemnt.component';
     IonicModule,
     ExplorePageRoutingModule
   ],
-  declarations: [ExplorePage,BookElemntComponent]
+  declarations: [ExplorePage,BookElemntComponent,BookModalComponent]
 })
 export class ExplorePageModule {}
