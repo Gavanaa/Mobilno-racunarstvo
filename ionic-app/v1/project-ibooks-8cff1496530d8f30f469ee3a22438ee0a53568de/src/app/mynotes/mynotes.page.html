@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/book-marks"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>My notes</ion-title>
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="success" (click)="addNoteModal()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let note of myNotes">
+    <ion-card-header>
+      <ion-card-title>{{note.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>{{note.content}} </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+{{    title}}    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+    <form #f="ngForm" (ngSubmit)="onAddBook()">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+        <ion-label position="floating">Title</ion-label>
+        <ion-input type="text" ngModel name="title" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>  
+        <ion-row>
+          <ion-col>
+            <ion-item>
+        <ion-label position="floating" required>Author</ion-label>
+        <ion-input type="text" ngModel name="author"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>  
+        <ion-row>
+          <ion-col>
+            <ion-item>
+        <ion-label position="floating">My mark:</ion-label>
+        <ion-input type="text" ngModel name="mark"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>  
+        <ion-row>
+          <ion-col>
+            <ion-item>
+        <ion-label position="floating" ngModel name="description">Description</ion-label>
+        <ion-textarea></ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>  
+        <ion-row>
+          <ion-col>
+            
+        <ion-button type="submit" expand="block" [disabled]="f.invalid">Add it</ion-button>
+       
+          
+          </ion-col>
+        </ion-row>  
+          </ion-grid>
+    </form>
+    
+</ion-content>
