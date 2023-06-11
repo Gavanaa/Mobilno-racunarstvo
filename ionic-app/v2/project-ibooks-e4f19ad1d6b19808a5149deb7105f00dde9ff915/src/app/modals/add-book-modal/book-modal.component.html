@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title> Add new book </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="onAddBook()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Title</ion-label>
+            <ion-input
+              type="text"
+              formControlName="title"
+              name="title"
+              required
+            ></ion-input>
+          </ion-item>
+          <div
+            class="error"
+            *ngIf="
+              form.controls['title'].invalid && form.controls['title'].touched
+            "
+          >
+            This field is required
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Author</ion-label>
+            <ion-input
+              type="text"
+              formControlName="author"
+              name="author"
+              required
+            ></ion-input>
+          </ion-item>
+          <div
+            class="error"
+            *ngIf="
+              form.controls['author'].invalid && form.controls['author'].touched
+            "
+          >
+            This field is required
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Description</ion-label>
+            <ion-textarea
+              formControlName="description"
+              name="description"
+            ></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block">Add book</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

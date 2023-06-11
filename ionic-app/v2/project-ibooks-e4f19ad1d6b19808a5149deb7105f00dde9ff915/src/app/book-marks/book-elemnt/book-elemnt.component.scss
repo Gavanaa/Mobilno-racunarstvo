@@ -1,0 +1,28 @@
+.rate {
+  font-size: 0.9em;
+  &:hover {
+    cursor: pointer;
+    color: gold !important;
+  }
+}
+
+.item {
+  padding: 0;
+}
+
+.icons {
+  cursor: pointer;
+  margin: auto 0.5em auto;
+}
+
+.book-label {
+  width: 100%;
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-ripple {
+  --ripple-color: transparent;
+  --background-activated: transparent;
+}
