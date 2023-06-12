@@ -1,0 +1,17 @@
+<div class="input">
+  <ion-input
+    type="text"
+    [formControl]="commentField"
+    name="title"
+    required
+    placeholder="Type comment here"
+  ></ion-input>
+  <ion-button (click)="postComment()">Comment</ion-button>
+</div>
+
+<br />
+
+<div class="comment" *ngFor="let comment of comments">
+  <ion-label><b>{{comment.user}}</b></ion-label>
+  <ion-input [readonly]="true">{{comment.comment}}</ion-input>
+</div>

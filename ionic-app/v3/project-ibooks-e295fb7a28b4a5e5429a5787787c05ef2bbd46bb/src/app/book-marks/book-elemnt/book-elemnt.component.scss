@@ -1,0 +1,58 @@
+.rate {
+  margin: auto 1rem auto;
+  &:hover {
+    cursor: pointer;
+    color: gold !important;
+  }
+}
+
+.item {
+  padding: 0;
+}
+
+.whole-element {
+  border-bottom: 1px solid grey;
+}
+
+.ratings {
+  margin-right: 0 !important;
+}
+
+.icons {
+  cursor: pointer;
+  margin: auto 0.5em auto;
+}
+
+.no-ripple {
+  --ripple-color: transparent;
+  --background-activated: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .ratings {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 11rem !important;
+  }
+
+  .field {
+    width: 5rem !important;
+    margin-right: 0 !important;
+  }
+
+  .tool-element {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 7.5rem !important;
+  }
+
+  .tool-element-1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 2.813rem !important;
+  }
+
+  .rate {
+    margin: auto 0.5rem auto;
+  }
+}

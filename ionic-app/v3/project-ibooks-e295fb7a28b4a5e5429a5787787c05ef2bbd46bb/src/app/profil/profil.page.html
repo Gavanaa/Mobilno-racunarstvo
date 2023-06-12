@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/book-marks"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <img [src]="user?.userPhoto" alt="profile-photo" />
+    <ion-item fill="outline">
+      <ion-label position="stacked" class="label">Name</ion-label>
+      <ion-input [readonly]="true" fill>{{user?.userName}}</ion-input>
+    </ion-item>
+    <ion-item fill="outline">
+      <ion-label position="stacked" class="label">Email</ion-label>
+      <ion-input [readonly]="true">{{user?.userEmail}}</ion-input>
+    </ion-item>
+  </div>
+</ion-content>
