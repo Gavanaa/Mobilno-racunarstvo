@@ -15,10 +15,10 @@ Zastupljeni su sledeći slučajevi korišćenja:
 
 6.Ocenjivanje knjige
 
-7. Ostavljanje komentara na unetu knjigu
+7.Ostavljanje komentara na unetu knjigu
 
-8. Unos beležaka
+8.Unos beležaka
 
-9. Odabir knjiga za čitanje
+9.Odabir knjiga za čitanje
 
 Tehnologije koje su korišćene za izradu su Ionic sa Angular-om i Firebase. 
