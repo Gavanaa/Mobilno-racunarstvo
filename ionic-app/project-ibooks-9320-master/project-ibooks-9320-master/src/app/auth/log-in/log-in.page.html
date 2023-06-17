@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <firebase-ui (signInSuccessWithAuthResult)="onLogIn($event)"></firebase-ui>
+  </div>
+</ion-content>

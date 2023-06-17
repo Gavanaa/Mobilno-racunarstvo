@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+      <ion-searchbar
+        [debounce]="500"
+        (ionInput)="filterResults($event)"
+      ></ion-searchbar>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" color="success" (click)="openAddBookModal()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-book-elemnt
+      [books]="filteredBooks"
+      (deleteBook)="onBookDeleted($event)"
+      (openAddBookModal)="onEditBook($event)"
+      (rateBook)="onRateBook($event)"
+      (toggleReadLater)="onReadLaterToggle($event)"
+    ></app-book-elemnt>
+  </ion-list>
+</ion-content>

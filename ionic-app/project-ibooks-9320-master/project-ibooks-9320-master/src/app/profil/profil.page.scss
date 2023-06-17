@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  img {
+    margin-top: 1rem;
+    width: 20%;
+  }
+
+  ion-item {
+    width: 50%;
+  }
+
+  .label {
+    font-weight: 800;
+    color: #2dd36f;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    ion-item {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  ion-input {
+    --background: rgb(54, 77, 168);
+  }
+
+  ion-button {
+    width: 25%;
+  }
+}
+
+.comment {
+  background-color: #69bb7b;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}

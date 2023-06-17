@@ -1,0 +1,46 @@
+<ion-item
+  *ngFor="let book of books; trackBy: trackByFn"
+  class="no-ripple item whole-element"
+>
+  <ion-item [routerLink]="book.id" slot="start" class="field">
+    <ion-label>{{ book.title }}</ion-label>
+  </ion-item>
+
+  <ion-item slot="start" class="no-ripple ratings">
+    <ion-icon
+      *ngFor="let i of [1, 2, 3, 4, 5]"
+      name="star"
+      class="rate"
+      aria-hidden="true"
+      (click)="gradeBook(book.id, i, book.userId)"
+      [ngStyle]="{
+        color: i <= book.rate?.[auth.getCurrentUserId()]?.value ? 'gold' : 'grey'
+      }"
+    ></ion-icon>
+  </ion-item>
+
+  <ion-item
+    slot="end"
+    *ngIf="book.userId === auth.getCurrentUserId()"
+    class="no-ripple tool-element"
+  >
+    <ion-icon
+      name="pencil"
+      (click)="editBook(book.id)"
+      class="icons"
+    ></ion-icon>
+    <ion-icon
+      name="trash-outline"
+      (click)="removeBook(book.id)"
+      class="icons"
+    ></ion-icon>
+  </ion-item>
+  <ion-item slot="end" class="no-ripple tool-element-1">
+    <ion-checkbox
+      [checked]="book.readLater?.[auth.getCurrentUserId()]?.value"
+      (ionChange)="readLaterToggle(book.id, book.userId, $event)"
+    ></ion-checkbox>
+  </ion-item>
+</ion-item>
+
+<br />

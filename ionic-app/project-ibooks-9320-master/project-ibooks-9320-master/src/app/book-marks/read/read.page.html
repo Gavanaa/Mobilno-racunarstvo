@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Read</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let book of readLaterBooks">
+    <ion-card-header>
+      <ion-card-title>{{book.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content
+      >{{book.description || noDescriptionText}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

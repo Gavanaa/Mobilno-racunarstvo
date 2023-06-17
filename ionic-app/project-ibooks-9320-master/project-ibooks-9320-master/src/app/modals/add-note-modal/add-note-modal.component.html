@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title> Add new book </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="onAddNote()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Note Title</ion-label>
+            <ion-input
+              type="text"
+              formControlName="title"
+              name="title"
+              required
+            ></ion-input>
+          </ion-item>
+          <div
+            class="error"
+            *ngIf="
+              form.controls['title'].invalid && form.controls['title'].touched
+            "
+          >
+            This field is required
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Note text</ion-label>
+            <ion-textarea
+              type="text"
+              formControlName="text"
+              name="author"
+              required
+            ></ion-textarea>
+          </ion-item>
+          <div
+            class="error"
+            *ngIf="
+              form.controls['text'].invalid && form.controls['text'].touched
+            "
+          >
+            This field is required
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block">Add note</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
